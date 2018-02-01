@@ -9,6 +9,7 @@ apt <- inst %>%
   select(Package, Built)
 
 ## write this new, smaller data frame to data/add-on-packages.csv
+write_csv(apt, 'data/add-on-packages.csv')
 
 ## make a frequency table of package by the version in Built
 ## if you use dplyr, code like this will work:
@@ -20,6 +21,8 @@ apt_freqtable <- apt %>%
 ## YES overwrite the files that are there now
 ## they came from me (Jenny)
 ## they are just examples
+write_csv(apt_freqtable, 'data/add-on-packages-freqtable.csv')
+
 
 ## when this script works, stage & commit it and the csv files
 ## PUSH!

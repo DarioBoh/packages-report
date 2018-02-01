@@ -4,7 +4,7 @@
 ## filter out packages in the default library
 ## keep variables Package and Built
 ## if you use dplyr, code like this will work:
-apt <- ipt %>%
+apt <- inst %>%
   filter(LibPath == .libPaths()[1]) %>%
   select(Package, Built)
 

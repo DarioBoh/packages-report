@@ -5,6 +5,11 @@ output: github_document
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
 ```{r setup, include = FALSE}
+library(here)
+library(fs)
+
+walk(dir_ls(here('r')), source)
+#source('R/01_write-installed-packages.R')
 knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>"
@@ -19,6 +24,9 @@ library(tidyverse)
 *As you complete tasks, you can ~~cross them out~~ by surrounding with `~~`.*
 
 * Have a look around the files here. Where are the R scripts? What are the directories `data` and `figs` for?
+
+In the R folder. data and figs contain data and figures files
+
 * Notice that this README is an `.Rmd` file. That means it could contain R code and will need to be rendered to create `README.md`.
 * Open [R/01_write-installed-packages.R](R/01_write-installed-packages.R). Write the script as directed. Run it. Commit and push the current state.
 * Open [R/02_wrangle-packages.R](R/02_wrangle-packages.R). Fill in the missing pieces of the script as directed. Run it. Commit and push the current state.
@@ -31,14 +39,17 @@ library(tidyverse)
 The goal of packages-report is to FINISH THIS SENTENCE.
 
 ```{r, include = FALSE}
-## load data/add-on-packages-freqtable.csv here in this chunk
+ff <- read_csv('data/add-on-packages-freqtable.csv')
+
 ```
 
-I have `FILL THIS IN!!!` add-on packages installed.
+I have `r nrow(ff)` add-on packages installed.
 
 Here's how they break down in terms of which version of R they were built under, which is related to how recently they were updated on CRAN.
 
 ```{r, echo = FALSE}
+fft <- read_csv('data/add-on-packages-freqtable.csv')
+knitr::kable(fft)
 ## print the frequency table here
 ## make it prettier if you know how
 ```

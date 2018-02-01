@@ -9,6 +9,9 @@ Workshop challenge checklist
 *As you complete tasks, you can ~~cross them out~~ by surrounding with `~~`.*
 
 -   Have a look around the files here. Where are the R scripts? What are the directories `data` and `figs` for?
+
+In the R folder. data and figs contain data and figures files
+
 -   Notice that this README is an `.Rmd` file. That means it could contain R code and will need to be rendered to create `README.md`.
 -   Open [R/01\_write-installed-packages.R](R/01_write-installed-packages.R). Write the script as directed. Run it. Commit and push the current state.
 -   Open [R/02\_wrangle-packages.R](R/02_wrangle-packages.R). Fill in the missing pieces of the script as directed. Run it. Commit and push the current state.
@@ -21,9 +24,23 @@ Overview
 
 The goal of packages-report is to FINISH THIS SENTENCE.
 
-I have `FILL THIS IN!!!` add-on packages installed.
+I have 4 add-on packages installed.
 
 Here's how they break down in terms of which version of R they were built under, which is related to how recently they were updated on CRAN.
+
+    #> Parsed with column specification:
+    #> cols(
+    #>   Built = col_character(),
+    #>   n = col_integer(),
+    #>   prop = col_double()
+    #> )
+
+| Built |    n|       prop|
+|:------|----:|----------:|
+| 3.4.0 |  191|  0.5667656|
+| 3.4.1 |   49|  0.1454006|
+| 3.4.2 |   39|  0.1157270|
+| 3.4.3 |   58|  0.1721068|
 
 ![](figs/built-barchart.png)
 

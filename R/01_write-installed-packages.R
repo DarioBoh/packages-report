@@ -13,6 +13,6 @@ inst %>% select(Package, LibPath, Version, Priority, Built)
 ## YES overwrite the file that is there now
 ## that came from me (Jenny)
 ## it an example of what yours should look like
-write_csv(inst, 'data/installed-packages.csv')
+write_csv(inst, here('data', 'installed-packages.csv'))
 ## when this script works, stage & commit it and the csv file
 ## PUSH!
